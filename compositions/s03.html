@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head><meta charset="UTF-8"></head>
+  <body>
+    <template>
+      <style>
+#s03-root { position:absolute; inset:0; }
+#s03-root .stage { position:absolute; inset:0; }
+#s03-root .hd { position:absolute; left:140px; top:96px; }
+#s03-root .cmd { position:absolute; left:0; right:0; top:330px; display:flex; justify-content:center; gap:36px; font-size:92px; }
+#s03-root .pt { display:flex; flex-direction:column; align-items:center; gap:22px; }
+#s03-root .pt .u { height:4px; width:100%; border-radius:2px; background:var(--line); }
+#s03-root .pt .l { color:var(--muted); }
+#s03-root .port { left:610px; top:690px; width:700px; height:130px; display:flex; align-items:center; justify-content:center; gap:30px; }
+#s03-root .port .mono { font-size:60px; color:var(--yellow); }
+
+      </style>
+      <div data-hf-id="hf-4ups" id="s03-root" data-composition-id="s03" data-width="1920" data-height="1080">
+        <div data-hf-id="hf-tan6" class="stage">
+
+<h1 data-hf-id="hf-a2be" class="hd">Подключение: <span data-hf-id="hf-neb8" class="g">одна команда</span></h1>
+<div data-hf-id="hf-03wg" class="cmd"><div data-hf-id="hf-2dv8" class="pt p0"><span data-hf-id="hf-dx5z" class="mono g">ssh</span><span data-hf-id="hf-kgtu" class="u"></span><span data-hf-id="hf-w9ei" class="lb l">команда</span></div><div data-hf-id="hf-35j1" class="pt p1"><span data-hf-id="hf-2rf2" class="mono">anna</span><span data-hf-id="hf-6ewm" class="u"></span><span data-hf-id="hf-qjwg" class="lb l">пользователь</span></div><div data-hf-id="hf-73n2" class="pt p2"><span data-hf-id="hf-evar" class="mono y">@</span><span data-hf-id="hf-6t7n" class="u"></span><span data-hf-id="hf-pd5z" class="lb l">собака</span></div><div data-hf-id="hf-b1r3" class="pt p3"><span data-hf-id="hf-7s1j" class="mono">203.0.113.7</span><span data-hf-id="hf-77io" class="u"></span><span data-hf-id="hf-31dw" class="lb l">адрес сервера</span></div></div>
+<div data-hf-id="hf-m4ev" class="card port"><span data-hf-id="hf-n2o2" class="mono">:22</span><span data-hf-id="hf-z5a1" class="lb">порт по умолчанию</span></div>
+        </div>
+      </div>
+      <script>
+        (function () {
+          var R = "#s03-root ";
+          var $ = function (s) { return R + s; };
+          var V = function (w) { return w + 0.3; };
+          var E = "power3.out", IO = "power2.inOut";
+          var tl = gsap.timeline({ paused: true });
+          function type(sel, t, step) {
+            var els = document.querySelectorAll(R + sel + " .ch");
+            for (var i = 0; i < els.length; i++) tl.set(els[i], { display: "inline" }, t + i * (step || 0.045));
+          }
+          function draw(sel, t, d) {
+            tl.fromTo($(sel), { strokeDasharray: 1, strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: d || 0.5, ease: "power2.out" }, t);
+          }
+          tl.fromTo($(".stage"), { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.5, ease: "power2.out" }, 0);
+tl.fromTo($(".hd"), { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.7, ease: E }, 0.2);
+tl.fromTo($(".pt .mono"), { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5, ease: E, stagger: 0.12 }, V(0.9));
+tl.to($(".p0 .u"), { backgroundColor: "#3ee08f", duration: 0.3 }, V(1.74));
+tl.fromTo($(".p0 .l"), { opacity: 0, y: -8 }, { opacity: 1, y: 0, duration: 0.4, ease: E }, V(1.74));
+tl.to($(".p1 .u"), { backgroundColor: "#3ee08f", duration: 0.3 }, V(2.74));
+tl.fromTo($(".p1 .l"), { opacity: 0, y: -8 }, { opacity: 1, y: 0, duration: 0.4, ease: E }, V(2.74));
+tl.to($(".p2 .u"), { backgroundColor: "#3ee08f", duration: 0.3 }, V(3.49));
+tl.fromTo($(".p2 .l"), { opacity: 0, y: -8 }, { opacity: 1, y: 0, duration: 0.4, ease: E }, V(3.49));
+tl.to($(".p3 .u"), { backgroundColor: "#3ee08f", duration: 0.3 }, V(4.26));
+tl.fromTo($(".p3 .l"), { opacity: 0, y: -8 }, { opacity: 1, y: 0, duration: 0.4, ease: E }, V(4.26));
+tl.fromTo($(".port"), { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.6, ease: E }, V(5.9));
+
+          tl.to($(".stage"), { opacity: 0, filter: "blur(6px)", y: -10, duration: 0.4, ease: "power2.inOut" }, 8.95);
+          window.__timelines["s03"] = tl;
+        })();
+      </script>
+    </template>
+  </body>
+</html>

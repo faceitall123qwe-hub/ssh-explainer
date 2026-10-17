@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head><meta charset="UTF-8"></head>
+  <body>
+    <template>
+      <style>
+#s05-root { position:absolute; inset:0; }
+#s05-root .stage { position:absolute; inset:0; }
+#s05-root .hd { position:absolute; left:140px; top:96px; }
+#s05-root .lg { left:140px; top:280px; width:760px; height:240px; padding:40px; display:flex; flex-direction:column; gap:24px; }
+#s05-root .lg .f { height:84px; border-radius:16px; border:1.5px solid var(--line); background:#0e1311; display:flex; align-items:center; padding:0 26px; }
+#s05-root .bt { left:1040px; top:280px; width:740px; height:560px; padding:36px 44px; }
+#s05-root .bt .t { display:flex; align-items:center; gap:18px; color:var(--yellow); margin-bottom:20px; }
+#s05-root .bt .t .ic { width:56px; height:56px; stroke-width:1.5; }
+#s05-root .tr { display:flex; align-items:center; justify-content:space-between; height:62px; color:var(--muted); }
+#s05-root .tr .x { color:var(--yellow); }
+#s05-root .cnt { position:absolute; left:140px; top:600px; }
+#s05-root .cnt .n { font-size:96px; font-weight:600; color:var(--yellow); letter-spacing:-0.03em; }
+#s05-root .cnt .lb { color:var(--muted); }
+
+      </style>
+      <div data-hf-id="hf-848w" id="s05-root" data-composition-id="s05" data-width="1920" data-height="1080">
+        <div data-hf-id="hf-tan6" class="stage">
+
+<h1 data-hf-id="hf-pv6i" class="hd">Пароль: <span data-hf-id="hf-cf8a" class="y">слабое место</span></h1>
+<div data-hf-id="hf-rw1x" class="card lg"><span data-hf-id="hf-zpih" class="mono muted">anna@server's password:</span><div data-hf-id="hf-do37" class="f mono"><span data-hf-id="hf-ucr6" class="ch">•</span><span data-hf-id="hf-7qdy" class="ch">•</span><span data-hf-id="hf-84oz" class="ch">•</span><span data-hf-id="hf-8j00" class="ch">•</span><span data-hf-id="hf-5qut" class="ch">•</span><span data-hf-id="hf-655u" class="ch">•</span><span data-hf-id="hf-6jgv" class="ch">•</span><span data-hf-id="hf-6xrw" class="ch">•</span></div></div>
+<div data-hf-id="hf-vjbw" class="card bt"><div data-hf-id="hf-i7y4" class="t"><svg data-hf-id="hf-p3wx" class="ic" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path data-hf-id="hf-l6xo" d="M12 8V4H8" /> <rect data-hf-id="hf-7qxl" width="16" height="12" x="4" y="8" rx="2" /> <path data-hf-id="hf-juv4" d="M2 14h2" /> <path data-hf-id="hf-9n9i" d="M20 14h2" /> <path data-hf-id="hf-r343" d="M15 13v2" /> <path data-hf-id="hf-y8fs" d="M9 13v2" /> </svg> <span data-hf-id="hf-nf57" class="lb">бот перебирает</span></div>
+<div data-hf-id="hf-f8ix" class="tr tr0 mono"><span data-hf-id="hf-b60u">123456</span><span data-hf-id="hf-lu9a" class="x">✕</span></div><div data-hf-id="hf-kgpq" class="tr tr1 mono"><span data-hf-id="hf-kc6l">qwerty</span><span data-hf-id="hf-bywi" class="x">✕</span></div><div data-hf-id="hf-kpoz" class="tr tr2 mono"><span data-hf-id="hf-ftgc">password</span><span data-hf-id="hf-cd7j" class="x">✕</span></div><div data-hf-id="hf-nm94" class="tr tr3 mono"><span data-hf-id="hf-0w17">anna2024</span><span data-hf-id="hf-crik" class="x">✕</span></div><div data-hf-id="hf-8dp9" class="tr tr4 mono"><span data-hf-id="hf-03fk">admin</span><span data-hf-id="hf-d5tl" class="x">✕</span></div><div data-hf-id="hf-uq4y" class="tr tr5 mono"><span data-hf-id="hf-lur7">letmein</span><span data-hf-id="hf-dk4m" class="x">✕</span></div></div>
+<div data-hf-id="hf-crwh" class="cnt"><div data-hf-id="hf-nb0g" class="n mono">12 408</div><div data-hf-id="hf-l0n0" class="lb">попыток за сутки</div></div>
+        </div>
+      </div>
+      <script>
+        (function () {
+          var R = "#s05-root ";
+          var $ = function (s) { return R + s; };
+          var V = function (w) { return w + 0.3; };
+          var E = "power3.out", IO = "power2.inOut";
+          var tl = gsap.timeline({ paused: true });
+          function type(sel, t, step) {
+            var els = document.querySelectorAll(R + sel + " .ch");
+            for (var i = 0; i < els.length; i++) tl.set(els[i], { display: "inline" }, t + i * (step || 0.045));
+          }
+          function draw(sel, t, d) {
+            tl.fromTo($(sel), { strokeDasharray: 1, strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: d || 0.5, ease: "power2.out" }, t);
+          }
+          tl.fromTo($(".stage"), { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.5, ease: "power2.out" }, 0);
+tl.fromTo($(".hd"), { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.7, ease: E }, 0.2);
+tl.fromTo($(".lg"), { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.6, ease: E }, V(0.3));
+type(".lg .f", V(0.8), 0.07);
+tl.to($(".lg"), { borderColor: "rgba(245,197,24,.6)", duration: 0.4 }, V(1.8));
+tl.fromTo($(".bt"), { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.6, ease: E }, V(3.0));
+tl.fromTo($(".tr"), { opacity: 0, x: 16 }, { opacity: 1, x: 0, duration: 0.3, ease: E, stagger: 0.32 }, V(3.4));
+tl.fromTo($(".cnt"), { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.6, ease: E }, V(5.2));
+
+          tl.to($(".stage"), { opacity: 0, filter: "blur(6px)", y: -10, duration: 0.4, ease: "power2.inOut" }, 8.45);
+          window.__timelines["s05"] = tl;
+        })();
+      </script>
+    </template>
+  </body>
+</html>

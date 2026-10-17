@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head><meta charset="UTF-8"></head>
+  <body>
+    <template>
+      <style>
+#s04-root { position:absolute; inset:0; }
+#s04-root .stage { position:absolute; inset:0; }
+#s04-root .hd { position:absolute; left:140px; top:96px; }
+#s04-root .term { left:140px; top:260px; width:1640px; height:400px; }
+#s04-root .kh { left:140px; top:730px; width:760px; height:150px; display:flex; align-items:center; gap:28px; padding:0 40px; }
+#s04-root .kh .ic { width:56px; height:56px; color:var(--green); stroke-width:1.5; }
+#s04-root .kh .ok { margin-left:auto; color:var(--green); }
+#s04-root .sh { position:absolute; left:1000px; top:760px; display:flex; align-items:center; gap:22px; }
+#s04-root .sh .ic { width:56px; height:56px; color:var(--yellow); stroke-width:1.5; }
+
+      </style>
+      <div data-hf-id="hf-5jeg" id="s04-root" data-composition-id="s04" data-width="1920" data-height="1080">
+        <div data-hf-id="hf-tan6" class="stage">
+
+<h1 data-hf-id="hf-mz3h" class="hd">Отпечаток <span data-hf-id="hf-gecb" class="g">сервера</span></h1>
+<div data-hf-id="hf-d8se" class="term"><div data-hf-id="hf-ufsv" class="bar"><i data-hf-id="hf-wt6k"></i><i data-hf-id="hf-zeb8"></i><i data-hf-id="hf-y7e5"></i><span data-hf-id="hf-31v2" class="mono muted">ssh anna@203.0.113.7</span></div>
+  <div data-hf-id="hf-2t3w" class="body"><div data-hf-id="hf-d3fr" class="mono f0 muted">The&#160;authenticity&#160;of&#160;host&#160;can't&#160;be&#160;established.</div><div data-hf-id="hf-rlfk" class="mono f1 y">ED25519&#160;key&#160;fingerprint&#160;is&#160;SHA256:3fK9…xQ2</div><div data-hf-id="hf-qzve" class="mono f2 muted">Are&#160;you&#160;sure&#160;you&#160;want&#160;to&#160;continue&#160;(yes/no)?</div><div data-hf-id="hf-fibx" class="mono ans"><span data-hf-id="hf-h51e" class="g">&gt;</span> <span data-hf-id="hf-9eo7" class="ch">y</span><span data-hf-id="hf-ol83" class="ch">e</span><span data-hf-id="hf-bsid" class="ch">s</span></div></div></div>
+<div data-hf-id="hf-z2mb" class="card kh"><svg data-hf-id="hf-p3wx" class="ic" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path data-hf-id="hf-dbxf" d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z" /> <path data-hf-id="hf-oor7" d="M14 2v5a1 1 0 0 0 1 1h5" /> <path data-hf-id="hf-59kx" d="M10 9H8" /> <path data-hf-id="hf-eoqm" d="M16 13H8" /> <path data-hf-id="hf-bfay" d="M16 17H8" /> </svg> <span data-hf-id="hf-yhgr" class="mono">known_hosts</span><span data-hf-id="hf-gfh9" class="lb ok">+ сервер</span></div>
+<div data-hf-id="hf-i3fd" class="sh"><svg data-hf-id="hf-9ojp" class="ic" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path data-hf-id="hf-49ze" d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" /> <path data-hf-id="hf-yfzu" d="m9 12 2 2 4-4" /> </svg> <span data-hf-id="hf-iypo" class="lb">подмена будет замечена</span></div>
+        </div>
+      </div>
+      <script>
+        (function () {
+          var R = "#s04-root ";
+          var $ = function (s) { return R + s; };
+          var V = function (w) { return w + 0.3; };
+          var E = "power3.out", IO = "power2.inOut";
+          var tl = gsap.timeline({ paused: true });
+          function type(sel, t, step) {
+            var els = document.querySelectorAll(R + sel + " .ch");
+            for (var i = 0; i < els.length; i++) tl.set(els[i], { display: "inline" }, t + i * (step || 0.045));
+          }
+          function draw(sel, t, d) {
+            tl.fromTo($(sel), { strokeDasharray: 1, strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: d || 0.5, ease: "power2.out" }, t);
+          }
+          tl.fromTo($(".stage"), { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.5, ease: "power2.out" }, 0);
+tl.fromTo($(".hd"), { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.7, ease: E }, 0.2);
+tl.fromTo($(".term"), { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.6, ease: E }, V(0.3));
+tl.fromTo($(".f0"), { opacity: 0 }, { opacity: 1, duration: 0.3 }, V(1.2));
+tl.fromTo($(".f1"), { opacity: 0, x: -10 }, { opacity: 1, x: 0, duration: 0.4, ease: E }, V(2.4));
+tl.fromTo($(".f2"), { opacity: 0 }, { opacity: 1, duration: 0.3 }, V(3.3));
+type(".ans", V(4.1), 0.1);
+tl.fromTo($(".kh"), { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.6, ease: E }, V(5.3));
+tl.fromTo($(".kh .ok"), { opacity: 0 }, { opacity: 1, duration: 0.4 }, V(6.2));
+tl.fromTo($(".sh"), { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.6, ease: E }, V(7.8));
+
+          tl.to($(".stage"), { opacity: 0, filter: "blur(6px)", y: -10, duration: 0.4, ease: "power2.inOut" }, 9.25);
+          window.__timelines["s04"] = tl;
+        })();
+      </script>
+    </template>
+  </body>
+</html>
